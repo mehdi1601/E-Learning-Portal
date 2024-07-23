@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>E-Learning Portal</h1>
+    </header>
+    
+    <main>
+        <!-- Login Section -->
+        <section id="login">
+            <h2>Student Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        
+        <!-- Portal Section (hidden initially) -->
+        <section id="portal" class="hidden">
+            <h2>Welcome, <span id="student-name"></span>!</h2>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#lessons">Lessons</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                </ul>
+            </nav>
+            <div id="portal-content">
+                <!-- Dynamic content will go here -->
+                <section id="lessons-section" class="hidden">
+                    <h3>Generate Lesson</h3>
+                    <form id="lesson-form">
+                        <label for="topic">Lesson Topic:</label>
+                        <input type="text" id="topic" name="topic" required>
+                        
+                        <button type="submit">Generate Lesson</button>
+                    </form>
+                    <div id="lesson-content"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
